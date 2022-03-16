@@ -12,13 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install Dependencies
+        uses: actions/checkout@v2 & Run Tests
         uses: actions/setup-node@v2
         with:
           node-version: "16"
       - run: npm install
-      - name: Run Tests
       - run: npm test
   staging:
     runs-on: ubuntu-latest
